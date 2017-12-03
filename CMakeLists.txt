@@ -34,12 +34,8 @@ MESSAGE(STATUS ${CMAKE_PREFIX_PATH})
 
 find_package(OpenCV 3.3.1 REQUIRED)
 
-find_package(Eigen 3 QUIET)
-if(NOT Eigen_FOUND)
-  include(${PROJ_SOURCE_DIR}/cmake_modules/FindEigen3.cmake)
-  set(Eigen_INCLUDE_DIR ${EIGEN3_INCLUDE_DIR})
-endif()
-include_directories(${Eigen_INCLUDE_DIR})
+find_package(PkgConfig)
+pkg_search_module(Eigen3 REQUIRED eigen3)
 
 find_package(Pangolin REQUIRED)
 find_package(tf)

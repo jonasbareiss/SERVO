@@ -58,7 +58,7 @@ Create a catkin workspace, clone the repository and submodules and execute the b
 mdir src
 catkin init
 cd src
-git clone --recursive https://github.com/grafue/SERVO.git
+git clone --recursive https://github.com/jonasbareiss/SERVO.git
 cd SERVO
 chmod +x build.sh
 ./build.sh
